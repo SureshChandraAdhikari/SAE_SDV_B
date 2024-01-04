@@ -1,0 +1,38 @@
+.background {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust the height as needed */
+    background-color: #000; /* Set the background color */
+  
+    /* Create the dots using pseudo-elements */
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #fff; /* Color of the dots */
+      opacity: 0.6; /* Adjust the opacity as desired */
+    }
+  
+    /* Use nth-child to create a grid of dots */
+    &::before {
+      top: 15%;
+      left: 10%;
+    }
+  
+    &::after {
+      top: 40%;
+      left: 30%;
+    }
+  
+    /* Add more dots using similar rules */
+    /* Adjust the positioning and size of dots to create the desired pattern */
+    /* Example:
+    &:nth-child(3)::before {
+      top: ...;
+      left: ...;
+    }
+    */
+  }
